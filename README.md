@@ -58,4 +58,3 @@ Join our community of developers creating universal apps.
 
 - to take picture use takePictureAsync and then store the result.uri in vaiable
   -than use saveToLibraryAsync from expo-media-library
--
