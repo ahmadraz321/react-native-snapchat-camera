@@ -13,13 +13,22 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.snapchatcamera"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permissions.READ_EXTERNAL_STORAGE",
+        "android.permissions.WRITE_EXTERNAL_STORAGE",
+        "android.permissions.ACCESS_MEDIA_LOCATION",
+        "android.permissions.CAMERA",
+        "android.permissions.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.snapchatcamera"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +36,24 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow ${PRODUCT_NAME} to use your camera",
+          "microphonePermission": "Allow ${PRODUCT_NAME} to access your microphone",
+          "recordAudioAndriod": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow ${PRODUCT_NAME} to access your photos",
+          "savePhotoPermission": "Allow ${PRODUCT_NAME} to save photos",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true

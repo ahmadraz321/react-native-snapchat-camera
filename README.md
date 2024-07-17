@@ -48,3 +48,14 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# How to work with camer
+
+-import camera view from expo-camer
+-than we need to provide a ref like this
+`const cameraRef = useRef<CameraView>(null);`
+-we need to set a mode for this like "picture" | "video"
+
+- to take picture use takePictureAsync and then store the result.uri in vaiable
+  -than use saveToLibraryAsync from expo-media-library
+-
